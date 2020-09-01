@@ -1,0 +1,164 @@
+/* LINK SLIDE LEFT*/
+
+@keyframes slideToLeft {
+  to {
+    transform: translateX(-100vw) translateZ(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(100vw) translateZ(0);
+  }
+  to {
+    transform: translateX(0) translateZ(0);
+  }
+}
+
+/* LINK SLIDE RIGHT */
+
+@keyframes slideToRight {
+  to {
+    transform: translateX(100vw) translateZ(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(-100vw) translateZ(0);
+  }
+  to {
+    transform: translateX(0) translateZ(0);
+  }
+}
+
+/* LINK SLIDE UP */
+
+@keyframes slideToUp {
+  to {
+    margin-top: -100vh;
+  }
+}
+
+@keyframes slideFromDown {
+  from {
+    margin-top: 100vh;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+/* LINK SLIDE DOWN */
+
+@keyframes slideToDown {
+  to {
+    margin-top: 100%;
+  }
+}
+
+@keyframes slideFromUp {
+  from {
+    margin-top: -100vh;
+
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+/* LINK COVER LEFT */
+
+@keyframes coverToLeft {
+  to {
+    transform: translateX(-25vw) translateZ(0);
+  }
+}
+
+@keyframes coverFromLeft {
+  from {
+    transform: translateX(100vw) translateZ(0);
+  }
+  to {
+    transform: translateX(0) translateZ(0);
+  }
+}
+
+/* LINK COVER RIGHT */
+
+@keyframes coverToRight {
+  to {
+    transform: translateX(25vw) translateZ(0);
+  }
+}
+
+@keyframes coverFromRight {
+  from {
+    transform: translateX(-100vw) translateZ(0);
+  }
+  to {
+    transform: translateX(0) translateZ(0);
+  }
+}
+
+/* LINK FADE */
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+/* LINK FADE UP */
+
+@keyframes fadeToUp {
+  to {
+    margin-top: -200px;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeFromDown {
+  from {
+    margin-top: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+/* LINK FADE DOWN */
+
+@keyframes fadeToDown {
+  to {
+    margin-top: 200px;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeFromUp {
+  from {
+    margin-top: -200px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
