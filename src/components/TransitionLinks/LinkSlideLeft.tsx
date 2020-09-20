@@ -11,7 +11,7 @@ export const LinkSlideLeft = ({ children, url }: IProps) => {
   const exitTransition = {
     length: 0.5,
     zIndex: 2,
-    trigger: ({ node }) => {
+    trigger: ({ node }: IProps) => {
       exitTransition.exitTrigger(node);
       if (node) (node as HTMLElement).style.top = -window.pageYOffset + 'px';
       window.scrollTo({ top: -window.pageYOffset });
@@ -26,7 +26,7 @@ export const LinkSlideLeft = ({ children, url }: IProps) => {
 
   const entryTransition = {
     zIndex: 1,
-    trigger: ({ node }) => {
+    trigger: ({ node }: IProps) => {
       entryTransition.entryTrigger(node);
     },
     entryTrigger: useCallback(container => {
@@ -39,12 +39,8 @@ export const LinkSlideLeft = ({ children, url }: IProps) => {
 
   return (
     <>
-      <TransitionLink
-        to={props.url}
-        exit={exitTransition}
-        entry={entryTransition}
-      >
-        {props.children}
+      <TransitionLink to={url} exit={exitTransition} entry={entryTransition}>
+        {children}
       </TransitionLink>
     </>
   );
