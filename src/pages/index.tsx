@@ -64,11 +64,8 @@ export const Home = () => {
             <LinkFadeUp url={'/about'}>Link Fade Up</LinkFadeUp>
             <LinkFadeDown url={'/about'}>Link Fade Down</LinkFadeDown>
 
-
             <LinkCoverLeft url={'/about'}>Link Cover Left</LinkCoverLeft>
             <LinkCoverRight url={'/about'}>Link Cover Right</LinkCoverRight>
-
-
           </div>
           <div className="Work__image-two">
             <LinkSlideLeft url={'/about'}>

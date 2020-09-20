@@ -28,7 +28,6 @@ export const font = {
       line-height: 24px;
     }
   `,
-
 };
 
 export const media = {

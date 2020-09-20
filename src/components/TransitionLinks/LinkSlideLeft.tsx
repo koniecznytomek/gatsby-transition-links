@@ -1,19 +1,19 @@
 import React, { ReactNode, useCallback } from 'react';
 import TransitionLink from 'gatsby-plugin-transition-link';
 
-interface Props {
+interface IProps {
   children: ReactNode;
-  node: ReactNode;
-  url: any;
+  node?: ReactNode;
+  url: string;
 }
 
-export const LinkSlideLeft = (props: Props) => {
+export const LinkSlideLeft = ({ children, url }: IProps) => {
   const exitTransition = {
     length: 0.5,
     zIndex: 2,
     trigger: ({ node }) => {
       exitTransition.exitTrigger(node);
-      node.style.top = -window.pageYOffset + 'px';
+      if (node) (node as HTMLElement).style.top = -window.pageYOffset + 'px';
       window.scrollTo({ top: -window.pageYOffset });
     },
     exitTrigger: useCallback(container => {
