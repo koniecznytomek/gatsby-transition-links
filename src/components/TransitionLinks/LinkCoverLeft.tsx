@@ -19,7 +19,7 @@ export const LinkCoverLeft = ({ children, url }: IProps) => {
     exitTrigger: useCallback(container => {
       container.setAttribute(
         'style',
-        'animation: coverToLeft 1.2s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
+        'animation: coverLeftOut 1.2s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
       );
     }, []),
   };
@@ -32,7 +32,7 @@ export const LinkCoverLeft = ({ children, url }: IProps) => {
     entryTrigger: useCallback(container => {
       container.setAttribute(
         'style',
-        'animation: coverFromLeft 0.7s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
+        'animation: coverLeftIn 0.7s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
       );
     }, []),
   };

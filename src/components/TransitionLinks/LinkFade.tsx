@@ -17,10 +17,7 @@ export const LinkFade = ({ children, url }: IProps) => {
       window.scrollTo({ top: -window.pageYOffset });
     },
     exitTrigger: useCallback(container => {
-      container.setAttribute(
-        'style',
-        'animation: slideFadeOut 0.8s ease forwards;'
-      );
+      container.setAttribute('style', 'animation: fadeOut 0.8s ease forwards;');
     }, []),
   };
 
@@ -30,10 +27,7 @@ export const LinkFade = ({ children, url }: IProps) => {
       entryTransition.entryTrigger(node);
     },
     entryTrigger: useCallback(container => {
-      container.setAttribute(
-        'style',
-        'animation: slideFadeIn 0.8s ease forwards;'
-      );
+      container.setAttribute('style', 'animation: fadeIn 0.8s ease forwards;');
     }, []),
   };
 

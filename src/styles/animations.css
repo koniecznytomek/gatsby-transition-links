@@ -1,12 +1,12 @@
 /* LINK SLIDE LEFT*/
 
-@keyframes slideToLeft {
+@keyframes slideLeftOut {
   to {
     transform: translateX(-100vw) translateZ(0);
   }
 }
 
-@keyframes slideFromLeft {
+@keyframes slideLeftIn {
   from {
     transform: translateX(100vw) translateZ(0);
   }
@@ -17,13 +17,13 @@
 
 /* LINK SLIDE RIGHT */
 
-@keyframes slideToRight {
+@keyframes slideRightOut {
   to {
     transform: translateX(100vw) translateZ(0);
   }
 }
 
-@keyframes slideFromRight {
+@keyframes slideRightIn {
   from {
     transform: translateX(-100vw) translateZ(0);
   }
@@ -34,13 +34,13 @@
 
 /* LINK SLIDE UP */
 
-@keyframes slideToUp {
+@keyframes slideUpOut {
   to {
-    margin-top: -100vh;
+    margin-top: -100%;
   }
 }
 
-@keyframes slideFromDown {
+@keyframes slideUpIn {
   from {
     margin-top: 100vh;
   }
@@ -51,13 +51,13 @@
 
 /* LINK SLIDE DOWN */
 
-@keyframes slideToDown {
+@keyframes slideDownOut {
   to {
     margin-top: 100%;
   }
 }
 
-@keyframes slideFromUp {
+@keyframes slideDownIn {
   from {
     margin-top: -100vh;
 
@@ -69,13 +69,13 @@
 
 /* LINK COVER LEFT */
 
-@keyframes coverToLeft {
+@keyframes coverLeftOut {
   to {
     transform: translateX(-25vw) translateZ(0);
   }
 }
 
-@keyframes coverFromLeft {
+@keyframes coverLeftIn {
   from {
     transform: translateX(100vw) translateZ(0);
   }
@@ -86,13 +86,13 @@
 
 /* LINK COVER RIGHT */
 
-@keyframes coverToRight {
+@keyframes coverRightOut {
   to {
     transform: translateX(25vw) translateZ(0);
   }
 }
 
-@keyframes coverFromRight {
+@keyframes coverRightIn {
   from {
     transform: translateX(-100vw) translateZ(0);
   }
@@ -103,7 +103,7 @@
 
 /* LINK FADE */
 
-@keyframes slideFadeIn {
+@keyframes fadeIn {
   from {
     opacity: 0;
   }
@@ -112,7 +112,7 @@
   }
 }
 
-@keyframes slideFadeOut {
+@keyframes fadeOut {
   from {
     opacity: 1;
   }
@@ -124,14 +124,14 @@
 
 /* LINK FADE UP */
 
-@keyframes fadeToUp {
+@keyframes fadeUpOut {
   to {
     margin-top: -200px;
     opacity: 0;
   }
 }
 
-@keyframes fadeFromDown {
+@keyframes fadeUpIn {
   from {
     margin-top: 200px;
     opacity: 0;
@@ -144,14 +144,14 @@
 
 /* LINK FADE DOWN */
 
-@keyframes fadeToDown {
+@keyframes fadeDownOut {
   to {
     margin-top: 200px;
     opacity: 0;
   }
 }
 
-@keyframes fadeFromUp {
+@keyframes fadeDownIn {
   from {
     margin-top: -200px;
     opacity: 0;

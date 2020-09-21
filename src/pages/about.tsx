@@ -10,6 +10,7 @@ import LinkCoverLeft from '../components/TransitionLinks/LinkCoverLeft';
 import LinkCoverRight from '../components/TransitionLinks/LinkCoverRight';
 import LinkFadeUp from '../components/TransitionLinks/LinkFadeUp';
 import LinkFadeDown from '../components/TransitionLinks/LinkFadeDown';
+import LinkCustom from '../components/TransitionLinks/LinkCustom';
 
 export const Container = styled.div`
   display: grid;
@@ -54,6 +55,9 @@ export const About = () => {
             </LinkFade>
           </div>
           <div className="Work__link-one">
+            <LinkCustom url={'/'} effect="fadeUp" lenght={2}>
+              Custom
+            </LinkCustom>
             <LinkSlideLeft url={'/'}>Link Slide Left</LinkSlideLeft>
             <LinkSlideRight url={'/'}>Link Slide Right</LinkSlideRight>
 

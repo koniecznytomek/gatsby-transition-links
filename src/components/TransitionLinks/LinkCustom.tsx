@@ -5,12 +5,14 @@ interface IProps {
   children: ReactNode;
   node?: ReactNode;
   url: string;
+  effect?: string;
+  lenght?: number;
 }
 
-export const LinkSlideLeft = ({ children, url }: IProps) => {
+export const LinkCustom = ({ children, url, effect, lenght }: IProps) => {
   const exitTransition = {
-    length: 0.5,
-    zIndex: 2,
+    length: lenght,
+    zIndex: 1,
     trigger: ({ node }: IProps) => {
       exitTransition.exitTrigger(node);
       if (node) (node as HTMLElement).style.top = -window.pageYOffset + 'px';
@@ -19,20 +21,28 @@ export const LinkSlideLeft = ({ children, url }: IProps) => {
     exitTrigger: useCallback(container => {
       container.setAttribute(
         'style',
-        'animation: slideLeftOut 0.5s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
+        'animation: ' +
+          effect +
+          'Out ' +
+          lenght +
+          's cubic-bezier(0.83, 0, 0.17, 1) forwards;'
       );
     }, []),
   };
 
   const entryTransition = {
-    zIndex: 1,
+    zIndex: 2,
     trigger: ({ node }: IProps) => {
       entryTransition.entryTrigger(node);
     },
     entryTrigger: useCallback(container => {
       container.setAttribute(
         'style',
-        'animation: slideLeftIn 0.5s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
+        'animation: ' +
+          effect +
+          'In ' +
+          lenght +
+          's cubic-bezier(0.83, 0, 0.17, 1) forwards;'
       );
     }, []),
   };
@@ -46,4 +56,4 @@ export const LinkSlideLeft = ({ children, url }: IProps) => {
   );
 };
 
-export default LinkSlideLeft;
+export default LinkCustom;

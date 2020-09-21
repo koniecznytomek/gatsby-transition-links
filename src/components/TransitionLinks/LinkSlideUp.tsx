@@ -19,7 +19,7 @@ export const LinkSlideUp = ({ children, url }: IProps) => {
     exitTrigger: useCallback(container => {
       container.setAttribute(
         'style',
-        'animation: slideToUp 0.8s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
+        'animation: slideUpOut 0.8s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
       );
     }, []),
   };
@@ -32,7 +32,7 @@ export const LinkSlideUp = ({ children, url }: IProps) => {
     entryTrigger: useCallback(container => {
       container.setAttribute(
         'style',
-        'animation: slideFromDown 0.8s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
+        'animation: slideUpIn 0.8s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
       );
     }, []),
   };

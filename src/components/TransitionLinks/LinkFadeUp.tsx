@@ -19,7 +19,7 @@ export const LinkFadeUp = ({ children, url }: IProps) => {
     exitTrigger: useCallback(container => {
       container.setAttribute(
         'style',
-        'animation: fadeToUp 0.8s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
+        'animation: fadeUpOut 0.8s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
       );
     }, []),
   };
@@ -32,7 +32,7 @@ export const LinkFadeUp = ({ children, url }: IProps) => {
     entryTrigger: useCallback(container => {
       container.setAttribute(
         'style',
-        'animation: fadeFromDown 0.8s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
+        'animation: fadeUpIn 0.8s cubic-bezier(0.83, 0, 0.17, 1) forwards;'
       );
     }, []),
   };
