@@ -8,7 +8,7 @@ You don't need any additional libraries like gsap. All simple animations are wri
 
 ```js
 import React from 'react';
-import LinkFade from '../components/TransitionLinks/LinkCustom';
+import LinkCustom from '../components/TransitionLinks/LinkCustom';
 
 export const Page = () => {
   return (
